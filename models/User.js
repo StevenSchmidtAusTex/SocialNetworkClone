@@ -1,6 +1,5 @@
 const { Schema, model } = require('mongoose');
 
-// schema to create user model
 const userSchema = new Schema(
     {
         username: {
@@ -15,7 +14,7 @@ const userSchema = new Schema(
             unique: true,
             match: [/\S+@\S+\.\S+/, 'Enter a valid email address.']
         },
-        thoughtss: [
+        thoughts: [
             {
                 type: Schema.Types.ObjectId,
                 ref: 'Thought'
